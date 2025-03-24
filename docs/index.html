@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>【今治市】救急病院 - 今日の当番医｜夜間・休日診療（内科・小児科）</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="canonical" href="https://imabari119.pages.dev">
+    <meta name="description" content="休日・夜間などの急な病気やケガの際、愛媛県今治市の今日の救急病院（当番医）の情報をご提供しています。">
+    <meta name="keywords" content="今治市,救急病院,当番医,夜間診療,休日診療,小児科,内科,救急外来,救急医療,しまなみ海道">
+    <meta property="og:title" content="【今治市】救急病院 - 今日の当番医｜夜間・休日診療（内科・小児科）">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://imabari119.pages.dev/ogp.png">
+    <meta property="og:site_name" content="【今治市】救急病院 - 今日の当番医｜夜間・休日診療（内科・小児科）">
+    <meta property="og:description" content="休日・夜間などの急な病気やケガの際、愛媛県今治市の今日の救急病院（当番医）の情報をご提供しています。">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .tag {
+            color: white;
+            padding: 0.5em 0.75em;
+            margin-right: 0.5em;
+            display: inline-flex;
+            align-items: center;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .tag i {
+            margin-right: 0.5em;
+        }
+
+        .logo-top {
+            width: 200px;
+            margin-top: 1em;
+        }
+        
+        footer {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero is-small is-danger">
+        <div class="hero-body has-text-centered">
+            <h1 class="title has-text-white">今治市の救急病院</h1>
+            <p class="subtitle has-text-white">今日の当番医</p>
+        </div>
+    </header>
+
+    <main class="section">
+        <div class="container" id="hospitalList"></div>
+    </main>
+
+    <section class="section">
+        <div class="container has-text-centered">
+            <a href="https://x.com/imabari119" class="button is-normal is-responsive">
+                <span class="icon">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </span>
+                <span>@imabari119 をフォロー</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="title is-4 has-text-centered">電話相談</h2>
+            <div class="columns is-multiline">
+                <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="subtitle is-5">
+                                <a href="https://www.city.imabari.ehime.jp/shoubou/kyukyu/handan.html"
+                                    target="_blank">えひめ救急電話相談 #7119</a>
+                            </h3>
+                            <div class="content">
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-question-circle"></i> 相談</span>
+                                    <span class="text">病院へ行く？救急車を呼ぶ？か迷ったら</span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-phone"></i> 電話</span>
+                                    <span class="text"><a href="tel:#7119" target="_blank">#7119</a></span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-phone"></i> 有料</span>
+                                    <span class="text"><a href="tel:0899099935" target="_blank">089-909-9935</a></span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-globe"></i> Web</span>
+                                    <span class="text"><a href="https://www.fdma.go.jp/relocation/neuter/topics/filedList9_6/kyukyu_app/kyukyu_app_web/index.html" target="_blank">Q助</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="subtitle is-5">
+                                <a href="https://www.city.imabari.ehime.jp/kenkou/hoken25.html"
+                                    target="_blank">子ども医療電話相談 #8000</a>
+                            </h3>
+                            <div class="content">
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-question-circle"></i> 相談</span>
+                                    <span class="text">子どもの急な病気に困ったら</span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-phone"></i> 電話</span>
+                                    <span class="text"><a href="tel:#8000" target="_blank">#8000</a></span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-phone"></i> 有料</span>
+                                    <span class="text"><a href="tel:0899132777" target="_blank">089-913-2777</a></span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-globe"></i> Web</span>
+                                    <span class="text"><a href="https://kodomo-qq.jp/" target="_blank">こどもの救急</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 id="search" class="title is-4 has-text-centered">救急病院を調べる</h2>
+            <div class="columns is-multiline">
+                <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="subtitle is-5">
+                                <a href="kouhou.html" target="_blank">広報いまばり</a>
+                            </h3>
+                            <div class="content">
+                                <p>
+                                    <span class="tag is-danger"><i class="far fa-file-pdf"></i> PDF</span>
+                                    <span class="text">救急病院などの当直表</span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-phone"></i> 電話</span>
+                                    <span class="text"><a href="tel:0898323300" target="_blank">0898-32-3300</a></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="subtitle is-5">
+                                <a href="https://www.iryou.teikyouseido.mhlw.go.jp/znk-web/juminkanja/S2310/initialize?pref=38"
+                                    target="_blank">えひめ医療情報ネット</a>
+                            </h3>
+                            <div class="content">
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-globe"></i> Web</span>
+                                    <span class="text">休日夜間対応医療機関</span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-hand-pointer"></i> 操作</span>
+                                    <span class="text">急いで探す → 休日対応医療機関 → 今治市</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                    <div class="card">
+                        <div class="card-content">
+                            <h3 class="subtitle is-5">
+                                <a href="https://imabari119-voice.streamlit.app/"
+                                    target="_blank">今治市救急当番病院案内</a>
+                            </h3>
+                            <div class="content">
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-globe"></i> Web</span>
+                                    <span class="text">今月の救急当番病院を音声と地図で案内</span>
+                                </p>
+                                <p>
+                                    <span class="tag is-danger"><i class="fas fa-hand-pointer"></i> 操作</span>
+                                    <span class="text">表示されないときはボタンを押してスリープを解除</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p class="has-text-centered">
+        <a href="https://www.code4imabari.org/" target="_blank" rel="noopener noreferrer">
+            <img class="logo-top" src="logo_Code4Imabari_blue.svg" alt="Code for Imabari デジタルの力で今治を未来につなげよう" />
+        </a>
+    </p>
+
+    <p class="has-text-centered">
+        Powered by
+        <a href="https://www.code4imabari.org/" target="_blank">Code for Imabari</a>
+    </p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
