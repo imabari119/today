@@ -15,6 +15,8 @@ jobs:
 
     - name: Download data.json
       run: curl -L -o docs/data.json ${{ secrets.JSON_URL }}
+    - name: Download sitemap.xml
+      run: curl -L -o docs/sitemap.xml ${{ secrets.SITEMAP_URL }}
 
     - name: Commit and push changes
       run: |
