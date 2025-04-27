@@ -23,7 +23,7 @@
             margin-right: 0.5em;
             display: inline-flex;
             align-items: center;
-            min-width: 60px;
+            width: 70px;
             text-align: center;
         }
 
@@ -31,6 +31,19 @@
             margin-right: 0.5em;
         }
 
+        .text {
+            flex-grow: 1;
+            overflow-wrap: break-word;
+            white-space: normal;
+            max-width: 100%;
+            display: block;
+        }
+        
+        .content p {
+            display: flex;
+            align-items: flex-start;
+        }
+        
         .logo-top {
             width: 200px;
             margin-top: 1em;
