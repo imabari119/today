@@ -15,7 +15,7 @@ function getDateTime(hoursOffset, minutesOffset) {
 }
 async function fetchHospitalData() {
   try {
-    const response = await fetch("data.json", { cache: "force-cache" });
+    const response = await fetch("data.json", { cache: "default" });
     return await response.json();
   } catch (error) {
     console.error("Error fetching the JSON data:", error);
