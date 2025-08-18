@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v5
 
     - name: Download data.json
       run: curl -L -o docs/data.json ${{ secrets.JSON_URL }}
