@@ -14,7 +14,9 @@ jobs:
       uses: actions/checkout@v5
 
     - name: Download data.json
-      run: curl -L -o docs/data.json ${{ secrets.JSON_URL }}
+      run: |
+        curl -L -o docs/data.json ${{ secrets.JSON_URL }}
+        jq empty docs/data.json || exit 1
 
     - name: Commit and push changes
       run: |
