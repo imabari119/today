@@ -2,7 +2,7 @@ name: Download and Commit JSON
 
 on:
   schedule:
-    - cron: '00 21 * * *'
+    - cron: '00 21 1,28 * *'
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
 
     - name: Download data.json
       run: |
-        curl -L -o docs/data.json ${{ secrets.JSON_URL }}
+        curl -L -o docs/data.json ${{ secrets.JSON_URL }} || exit 1
         jq empty docs/data.json || exit 1
 
     - name: Commit and push changes
