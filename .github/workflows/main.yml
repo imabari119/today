@@ -2,7 +2,7 @@ name: Download and Commit JSON
 
 on:
   schedule:
-    - cron: '00 21 1,28 * *'
+    - cron: '00 21 1,26,28 * *'
   workflow_dispatch:
 
 jobs:
