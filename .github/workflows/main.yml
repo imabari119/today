@@ -15,7 +15,7 @@ jobs:
 
     - name: Download data.json
       run: |
-        curl -L -o docs/data.json ${{ secrets.JSON_URL }} || exit 1
+        curl -sSL "${{ secrets.JSON_URL }}" | jq . > docs/data.json || exit 1
         jq empty docs/data.json || exit 1
 
     - name: Commit and push changes
