@@ -44,7 +44,7 @@ function renderHospitals(hospitalData, dates) {
 async function initPage() {
   const specifiedDate = getDateFromURL();
   const todayDate = getDateTime(0, 30);
-  const tomorrowDate = getDateTime(15, 0);
+  const tomorrowDate = getDateTime(16, 0);
   const hospitalData = await fetchHospitalData();
   if (specifiedDate) {
     renderHospitals(hospitalData, [specifiedDate]);
