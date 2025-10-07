@@ -5,6 +5,12 @@ on:
     - cron: '00 21 1,26,28 * *'
   workflow_dispatch:
 
+# Ensure Actions can write Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   download-json:
     runs-on: ubuntu-latest
@@ -29,7 +35,8 @@ jobs:
           git commit -m "Update data.json" -a
           git push
         fi
-        
+
+ 
   deploy_pages:
     name: Deploy GitHub Pages
     needs: download-json
@@ -50,3 +57,5 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
+
+
