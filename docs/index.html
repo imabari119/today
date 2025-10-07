@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja-JP" data-theme="light">
+<html lang="ja" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -14,9 +14,36 @@
     <meta property="og:image" content="https://imabari119.github.io/today/ogp.png">
     <meta property="og:site_name" content="【今治市】救急病院 - 今日の当番医｜夜間・休日診療（内科・小児科）">
     <meta property="og:description" content="休日・夜間などの急な病気やケガの際、愛媛県今治市の今日の救急病院（当番医）の情報をご提供しています。">
+    <meta name="theme-color" content="#d9534f">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-    <script src="https://kit.fontawesome.com/8df7786fda.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/8df7786fda.js" crossorigin="anonymous"></script>
     <style>
+        /* Skip link for keyboard users */
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 1rem;
+            top: 1rem;
+            width: auto;
+            height: auto;
+            padding: 0.5rem 1rem;
+            background: #fff;
+            color: #000;
+            z-index: 10000;
+            border: 2px solid #000;
+        }
+
         .tag {
             color: white;
             padding: 0.5em 0.75em;
@@ -47,19 +74,18 @@
             align-items: flex-start;
         }
     </style>
+    <!-- Google tag (gtag.js) - placed early in head for faster measurement -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGJ7YEP2B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RMGJ7YEP2B');
+    </script>
 </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGJ7YEP2B"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-RMGJ7YEP2B');
-</script>
-
 <body class="has-background-light">
+    <a class="skip-link" href="#main-content">メインコンテンツへスキップ</a>
     <header class="hero is-small is-danger">
         <div class="hero-body has-text-centered">
             <h1 class="title has-text-white">今治市の救急病院</h1>
@@ -89,11 +115,13 @@
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-phone"></i> 電話</span>
-                                    <span class="text"><a href="tel:#7119" aria-label="えひめ救急電話相談に電話をかける">#7119</a></span>
+                                    <span class="text"><a href="tel:#7119"
+                                            aria-label="えひめ救急電話相談に電話をかける">#7119</a></span>
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-phone"></i> 有料</span>
-                                    <span class="text"><a href="tel:0899099935" aria-label="えひめ救急電話相談（有料）に電話をかける">089-909-9935</a></span>
+                                    <span class="text"><a href="tel:0899099935"
+                                            aria-label="えひめ救急電話相談（有料）に電話をかける">089-909-9935</a></span>
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-globe"></i> Web</span>
@@ -119,11 +147,13 @@
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-phone"></i> 電話</span>
-                                    <span class="text"><a href="tel:#8000" aria-label=子ども医療電話相談に電話をかける">#8000</a></span>
+                                    <span class="text"><a href="tel:#8000"
+                                            aria-label="子ども医療電話相談に電話をかける">#8000</a></span>
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-phone"></i> 有料</span>
-                                    <span class="text"><a href="tel:0899132777" aria-label="子ども医療電話相談（有料）に電話をかける">089-913-2777</a></span>
+                                    <span class="text"><a href="tel:0899132777"
+                                            aria-label="子ども医療電話相談（有料）に電話をかける">089-913-2777</a></span>
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-globe"></i> Web</span>
@@ -154,7 +184,8 @@
                                 </p>
                                 <p>
                                     <span class="tag is-danger"><i class="fas fa-phone"></i> 電話</span>
-                                    <span class="text"><a href="tel:0898323300" aria-label="救急病院案内電話番号に電話をかける">0898-32-3300</a></span>
+                                    <span class="text"><a href="tel:0898323300"
+                                            aria-label="救急病院案内電話番号に電話をかける">0898-32-3300</a></span>
                                 </p>
                             </div>
                         </div>
@@ -184,8 +215,7 @@
                     <div class="card">
                         <div class="card-content">
                             <h3 class="subtitle is-5">
-                                <a href="https://imabari119.streamlit.app/"
-                                    target="_blank">今治市救急当番病院案内</a>
+                                <a href="https://imabari119.streamlit.app/" target="_blank">今治市救急当番病院案内</a>
                             </h3>
                             <div class="content">
                                 <p>
@@ -203,71 +233,73 @@
             </div>
         </div>
     </section>
-    
+
     <section class="section">
         <div class="container">
-            <h2 id="search" class="title is-4 has-text-centered">オープンデータ</h2>
-                <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
-                    <div class="card">
-                        <div class="card-content">
-                            <h3 class="subtitle is-5">
-                                <a href="https://github.com/imabari119/calendar"
-                                    target="_blank">当番医データ</a>
-                            </h3>
-                            <div class="content">
-                                <p>
-                                    <span class="tag is-danger"><i class="fas fa-calendar"></i> Web</span>
-                                    <span class="text"><a href="https://imabari119.github.io/calendar/" target="_blank">カレンダーで表示</a></span>
-                                </p>
-                                <p>
-                                    <span class="tag is-danger"><i class="fas fa-file-csv"></i> CSV</span>
-                                    <span class="text"><a href="https://github.com/imabari119/calendar/blob/main/latest.csv" target="_blank">一覧で表示</a></span>
-                                </p>
-                                <p>
-                                    <span class="tag is-danger"><i class="fas fa-download"></i> CSV</span>
-                                    <span class="text"><a href="https://imabari119.github.io/calendar/download.csv" target="_blank">ファイルをダウンロード</a></span>
-                                </p>
-                            </div>
+            <h2 id="opendata" class="title is-4 has-text-centered">オープンデータ</h2>
+            <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="subtitle is-5">
+                            <a href="https://github.com/imabari119/calendar" target="_blank">当番医データ</a>
+                        </h3>
+                        <div class="content">
+                            <p>
+                                <span class="tag is-danger"><i class="fas fa-calendar"></i> Web</span>
+                                <span class="text"><a href="https://imabari119.github.io/calendar/"
+                                        target="_blank">カレンダーで表示</a></span>
+                            </p>
+                            <p>
+                                <span class="tag is-danger"><i class="fas fa-file-csv"></i> CSV</span>
+                                <span class="text"><a href="https://github.com/imabari119/calendar/blob/main/latest.csv"
+                                        target="_blank">一覧で表示</a></span>
+                            </p>
+                            <p>
+                                <span class="tag is-danger"><i class="fas fa-download"></i> CSV</span>
+                                <span class="text"><a href="https://imabari119.github.io/calendar/download.csv"
+                                        target="_blank">ファイルをダウンロード</a></span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
-    
+
     <footer class="footer has-text-centered">
-      <div class="container">
-    
-        <div class="mb-4">
-          <a href="https://github.com/imabari119" target="_blank" rel="noopener noreferrer">
-            <figure class="image is-48x48 is-inline-block">
-              <img src="github-mark.svg" alt="GitHub ロゴ" />
-            </figure>
-          </a>
+        <div class="container">
+
+            <div class="mb-4">
+                <a href="https://github.com/imabari119" target="_blank" rel="noopener noreferrer">
+                    <figure class="image is-48x48 is-inline-block">
+                        <img src="github-mark.svg" alt="GitHub ロゴ" loading="lazy" />
+                    </figure>
+                </a>
+            </div>
+
+            <div class="mb-4">
+                <a href="https://www.code4imabari.org/" target="_blank" rel="noopener noreferrer">
+                    <p class="is-size-6 mt-2 has-text-weight-semibold">
+                        デジタルの力で今治を未来につなげよう
+                    </p>
+                    <figure class="image is-inline-block" style="max-width: 200px;">
+                        <img src="logo_Code4Imabari_blue.svg" alt="Code for Imabari ロゴ" loading="lazy" />
+                    </figure>
+                </a>
+                <p class="is-size-7 mt-1">
+                    Powered by <a href="https://www.code4imabari.org/">Code for Imabari</a>
+                </p>
+            </div>
+
+            <div class="mt-4">
+                <a href="./privacy.html" class="is-size-7">プライバシーポリシー</a>
+            </div>
+
         </div>
-    
-        <div class="mb-4">
-          <a href="https://www.code4imabari.org/" target="_blank" rel="noopener noreferrer">
-            <p class="is-size-6 mt-2 has-text-weight-semibold">
-              デジタルの力で今治を未来につなげよう
-            </p>
-            <figure class="image is-inline-block" style="max-width: 200px;">
-              <img src="logo_Code4Imabari_blue.svg" alt="Code for Imabari ロゴ" />
-            </figure>
-          </a>
-          <p class="is-size-7 mt-1">
-            Powered by <a href="https://www.code4imabari.org/">Code for Imabari</a>
-          </p>
-        </div>
-    
-        <div class="mt-4">
-          <a href="./privacy.html" class="is-size-7">プライバシーポリシー</a>
-        </div>
-    
-      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 
 </html>
