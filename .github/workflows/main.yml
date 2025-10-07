@@ -29,3 +29,24 @@ jobs:
           git commit -m "Update data.json" -a
           git push
         fi
+        
+  deploy_pages:
+    name: Deploy GitHub Pages
+    needs: download-json
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v5
+
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+
+    - name: Upload site artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./docs
+
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
