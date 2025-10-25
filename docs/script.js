@@ -40,7 +40,7 @@ const createHospitalCard = (h) => {
 
   return `
     <div class="column is-12-tablet is-8-desktop is-offset-2-desktop">
-      <div class="card">
+      <div class="card hospital-card">
         <div class="card-content">
           <h3 class="subtitle is-5">
             <a href="${link}" target="_blank" rel="noopener noreferrer">${name}</a>
