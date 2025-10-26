@@ -63,6 +63,7 @@ const renderHospitals = (hospitalData = {}, dates = []) => {
     return;
   }
 
+  container.style.minHeight = "";
   const parts = [];
   dates.forEach((date) => {
     const dayData = hospitalData[date];
