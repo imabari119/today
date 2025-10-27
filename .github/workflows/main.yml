@@ -5,9 +5,8 @@ on:
     - cron: '00 21 1,26,28 * *'
   workflow_dispatch:
 
-# Ensure Actions can write Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -25,9 +24,12 @@ jobs:
         jq empty docs/data.json || exit 1
 
     - name: Commit and push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git config --global user.name 'GitHub Actions'
         git config --global user.email 'actions@github.com'
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}
         git add -N .
         if ! git diff --exit-code --quiet
         then
@@ -36,7 +38,6 @@ jobs:
           git push
         fi
 
- 
   deploy_pages:
     name: Deploy GitHub Pages
     needs: download-json
@@ -57,5 +58,3 @@ jobs:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
-
-
