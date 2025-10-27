@@ -221,13 +221,15 @@
               <div class="flex items-start gap-3"><span class="material-symbols-outlined">location_on</span><p class="flex-1">${h.address}</p></div>
               <div class="flex items-start gap-3"><span class="material-symbols-outlined">call</span><p class="flex-1">${h.daytime}</p></div>
             </div>
+
             <div class="flex items-center gap-3 pt-4 mt-2 border-t border-background-light dark:border-background-dark">
-              <a href="tel:${h.daytime}"　class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-text-on-primary text-base font-medium leading-normal gap-2">
+              <a href="tel:${h.daytime}"
+                class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-text-on-primary text-base font-medium leading-normal gap-2">
                 <span class="material-symbols-outlined">call</span>
                 <span class="truncate">電話をかける</span>
               </a>
-
-              <a href="${h.navi}" target="_blank" rel="noopener noreferrer" class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-base font-medium leading-normal gap-2">
+              <a href="${h.navi}" target="_blank" rel="noopener noreferrer"
+                class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-base font-medium leading-normal gap-2">
                 <span class="material-symbols-outlined">map</span>
                 <span class="truncate">地図を見る</span>
               </a>
