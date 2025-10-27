@@ -1,228 +1,245 @@
 <!DOCTYPE html>
 <html lang="ja" class="light">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>今治市の救急病院</title>
-  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-  <link rel="canonical" href="https://imabari119.github.io/today/" />
-  <meta name="description" content="愛媛県今治市の救急医療情報サイト。地域の救急病院（当番医）をわかりやすく紹介し、休日や夜間の急な病気やケガのときに受診できる医療機関をすぐに確認できます" />
-  <meta name="keywords" content="今治市,救急病院,今日,明日,夜間診療,休日診療,小児科,内科,救急外来" />
-  <meta property="og:title" content="今治市の救急病院｜休日や夜間の当番医をすぐに確認できます" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://imabari119.github.io/today/ogp.png" />
-  <meta property="og:site_name" content="今治市の救急病院｜休日や夜間の当番医をすぐに確認できます" />
-  <meta property="og:description" content="愛媛県今治市の救急医療情報サイト。地域の救急病院（当番医）をわかりやすく紹介し、休日や夜間の急な病気やケガのときに受診できる医療機関をすぐに確認できます" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今治市の救急病院</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="canonical" href="https://imabari119.github.io/today/" />
+    <meta name="description" content="愛媛県今治市の救急医療情報サイト。地域の救急病院（当番医）をわかりやすく紹介し、休日や夜間の急な病気やケガのときに受診できる医療機関をすぐに確認できます" />
+    <meta name="keywords" content="今治市,救急病院,今日,明日,夜間診療,休日診療,小児科,内科,救急外来" />
+    <meta property="og:title" content="今治市の救急病院｜休日や夜間の当番医をすぐに確認できます" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://imabari119.github.io/today/ogp.png" />
+    <meta property="og:site_name" content="今治市の救急病院｜休日や夜間の当番医をすぐに確認できます" />
+    <meta property="og:description"
+        content="愛媛県今治市の救急医療情報サイト。地域の救急病院（当番医）をわかりやすく紹介し、休日や夜間の急な病気やケガのときに受診できる医療機関をすぐに確認できます" />
 
-  <!-- TailwindCSS -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-  <!-- Tailwind 設定 -->
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            primary: "#D93B3B",
-            "background-light": "#F8F8F8",
-            "background-dark": "#1C1C1E",
-            "card-light": "#FFFFFF",
-            "card-dark": "#2C2C2E",
-            "text-primary-light": "#1C1C1E",
-            "text-primary-dark": "#F2F2F7",
-            "text-secondary-light": "#6D6D72",
-            "text-secondary-dark": "#8D8D92",
-            "text-on-primary": "#FFFFFF",
-          },
-          fontFamily: {
-            display: ["Inter", "Noto Sans JP", "sans-serif"]
-          },
-        },
-      },
-    };
-  </script>
+    <!-- Tailwind 設定 -->
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#D93B3B",
+                        "background-light": "#F8F8F8",
+                        "background-dark": "#1C1C1E",
+                        "card-light": "#FFFFFF",
+                        "card-dark": "#2C2C2E",
+                        "text-primary-light": "#1C1C1E",
+                        "text-primary-dark": "#F2F2F7",
+                        "text-secondary-light": "#6D6D72",
+                        "text-secondary-dark": "#8D8D92",
+                        "text-on-primary": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "Noto Sans JP", "sans-serif"]
+                    },
+                },
+            },
+        };
+    </script>
 
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    }
-    body {
-      min-height: 100vh;
-      font-family: 'Noto Sans JP', sans-serif;
-    }
-    .loading {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 200px;
-    }
-  </style>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGJ7YEP2B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-RMGJ7YEP2B');
-  </script>
+        body {
+            min-height: 100vh;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGJ7YEP2B"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-RMGJ7YEP2B');
+    </script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display">
-  <div class="flex flex-col min-h-screen w-full overflow-x-hidden">
-    <!-- ヘッダー -->
-    <header class="flex items-center bg-card-light dark:bg-card-dark p-4 pb-3 sticky top-0 z-10 shadow-sm">
-      <h1 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold text-center flex-1">
-        今治市の救急病院
-      </h1>
-    </header>
+    <div class="flex flex-col min-h-screen w-full overflow-x-hidden">
+        <!-- ヘッダー -->
+        <header class="flex items-center bg-card-light dark:bg-card-dark p-4 pb-3 sticky top-0 z-10 shadow-sm">
+            <h1 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold text-center flex-1">
+                今治市の救急病院
+            </h1>
+        </header>
 
-    <!-- メイン -->
-    <main class="flex-1 px-4 py-4">
-      <div class="flex items-center justify-between mb-4">
-        <button id="prevBtn" aria-label="前の日へ" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-text-secondary-light dark:text-text-secondary-dark">
-          <span class="material-symbols-outlined">chevron_left</span>
-        </button>
-        <p id="dateDisplay" class="text-primary text-xl font-bold"></p>
-        <button id="nextBtn" aria-label="次の日へ" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-text-secondary-light dark:text-text-secondary-dark">
-          <span class="material-symbols-outlined">chevron_right</span>
-        </button>
-      </div>
+        <!-- メイン -->
+        <main class="flex-1 px-4 py-4">
+            <div class="flex items-center justify-between mb-4">
+                <button id="prevBtn" aria-label="前の日へ"
+                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-text-secondary-light dark:text-text-secondary-dark">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <p id="dateDisplay" class="text-primary text-xl font-bold"></p>
+                <button id="nextBtn" aria-label="次の日へ"
+                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-text-secondary-light dark:text-text-secondary-dark">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
 
-      <div id="hospitalList" class="flex flex-col gap-4">
-        <div class="loading">
-          <p class="text-text-secondary-light dark:text-text-secondary-dark">読み込み中...</p>
-        </div>
-      </div>
-    </main>
-  </div>
+            <div id="hospitalList" class="flex flex-col gap-4">
+                <div class="loading">
+                    <p class="text-text-secondary-light dark:text-text-secondary-dark">読み込み中...</p>
+                </div>
+            </div>
+        </main>
+    </div>
 
-  <!-- メインスクリプト -->
-  <script defer>
-  let hospitalData = {};
-  let currentDate = null;
+    <!-- メインスクリプト -->
+    <script defer>
+        let hospitalData = {};
+        let currentDate = null;
 
-  // === 日本時間の日付取得（8:30以前なら前日） ===
-  const getJapanCurrentDate = () => {
-    const now = new Date();
-    const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
-    if (japanTime.getHours() < 8 || (japanTime.getHours() === 8 && japanTime.getMinutes() < 30)) {
-      japanTime.setDate(japanTime.getDate() - 1);
-    }
-    return japanTime;
-  };
+        // === 日本時間の日付取得（8:30以前なら前日） ===
+        const getJapanCurrentDate = () => {
+            const now = new Date();
+            const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+            if (japanTime.getHours() < 8 || (japanTime.getHours() === 8 && japanTime.getMinutes() < 30)) {
+                japanTime.setDate(japanTime.getDate() - 1);
+            }
+            return japanTime;
+        };
 
-  // === 日付フォーマット ===
-  const formatDate = (date) =>
-    `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+        // === 日付フォーマット ===
+        const formatDate = (date) =>
+            `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 
-  // === データ読み込み ===
-  const loadHospitalData = async () => {
-    try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 8000); // 8秒で中断
+        // === データ読み込み ===
+        const loadHospitalData = async () => {
+            try {
+                const controller = new AbortController();
+                const timeout = setTimeout(() => controller.abort(), 8000); // 8秒で中断
 
-      const response = await fetch('data.json', { signal: controller.signal });
-      clearTimeout(timeout);
+                const response = await fetch('data.json', { signal: controller.signal });
+                clearTimeout(timeout);
 
-      if (!response.ok) throw new Error('ファイルが見つかりません');
+                if (!response.ok) throw new Error('ファイルが見つかりません');
 
-      hospitalData = await response.json();
-      currentDate = getJapanCurrentDate();
-      renderHospitals();
-      scheduleNextUpdate();
-    } catch (err) {
-      console.error('データ読み込み失敗:', err);
-      const msg = `
+                hospitalData = await response.json();
+                currentDate = getJapanCurrentDate();
+                renderHospitals();
+                scheduleNextUpdate();
+            } catch (err) {
+                console.error('データ読み込み失敗:', err);
+                const msg = `
         <div class="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg text-center">
           <p class="text-red-600 dark:text-red-400 font-medium">データの読み込みに失敗しました。</p>
           <p class="text-sm mt-2 text-red-600 dark:text-red-400">data.json が同じディレクトリにあることを確認してください。</p>
           <p class="text-sm mt-1 text-red-600 dark:text-red-400">ローカル環境では Webサーバーを使用する必要があります。</p>
         </div>`;
-      document.getElementById('hospitalList').innerHTML = msg;
-    }
-  };
+                document.getElementById('hospitalList').innerHTML = msg;
+            }
+        };
 
-  // === 次の更新（日本時間8:30）を予約 ===
-  const scheduleNextUpdate = () => {
-    const now = new Date();
-    const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
-    const nextUpdate = new Date(japanTime);
-    nextUpdate.setHours(8, 30, 0, 0);
-    if (japanTime >= nextUpdate) nextUpdate.setDate(nextUpdate.getDate() + 1);
-    setTimeout(() => {
-      currentDate = getJapanCurrentDate();
-      renderHospitals();
-      scheduleNextUpdate();
-    }, nextUpdate - japanTime);
-  };
+        // === 次の更新（日本時間8:30）を予約 ===
+        const scheduleNextUpdate = () => {
+            const now = new Date();
+            const japanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+            const nextUpdate = new Date(japanTime);
+            nextUpdate.setHours(8, 30, 0, 0);
+            if (japanTime >= nextUpdate) nextUpdate.setDate(nextUpdate.getDate() + 1);
+            setTimeout(() => {
+                currentDate = getJapanCurrentDate();
+                renderHospitals();
+                scheduleNextUpdate();
+            }, nextUpdate - japanTime);
+        };
 
-  // === 病院データを描画 ===
-  const renderHospitals = () => {
-    const dateKey = formatDate(currentDate);
-    const data = hospitalData[dateKey];
-    const dateDisplay = document.getElementById('dateDisplay');
-    const hospitalList = document.getElementById('hospitalList');
+        // === 病院データを描画 ===
+        const renderHospitals = () => {
+            const dateKey = formatDate(currentDate);
+            const data = hospitalData[dateKey];
+            const dateDisplay = document.getElementById('dateDisplay');
+            const hospitalList = document.getElementById('hospitalList');
 
-    if (!data) {
-      dateDisplay.textContent = formatDate(currentDate);
-      hospitalList.innerHTML = `<p class="text-center text-text-secondary-light dark:text-text-secondary-dark">この日の救急病院情報はありません。</p>`;
-      return;
-    }
+            if (!data) {
+                dateDisplay.textContent = formatDate(currentDate);
+                hospitalList.innerHTML = `<p class="text-center text-text-secondary-light dark:text-text-secondary-dark">この日の救急病院情報はありません。</p>`;
+                return;
+            }
 
-    dateDisplay.textContent = data.date_week;
-    hospitalList.innerHTML = data.hospitals.map(h => `
-      <div class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
-        <h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold"><a href="${h.link}" target="_blank" class="hover:underline text-primary dark:text-primary">${h.name}</a></h2>
-        <div class="flex flex-col gap-3 pt-4">
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">medical_services</span>
-            <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">診療: ${h.medical}</p>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">schedule</span>
-            <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">時間: ${h.time}</p>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">location_on</span>
-            <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">住所: ${h.address}</p>
-          </div>
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">call</span>
-            <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">電話: ${h.daytime}</p>
-          </div>
-        </div>
-        <div class="flex gap-3 pt-4 mt-2 border-t border-background-light dark:border-background-dark">
-          <a href="tel:${h.daytime}" class="flex flex-1 items-center justify-center h-11 px-4 rounded-lg bg-primary text-text-on-primary font-medium gap-2">
-            <span class="material-symbols-outlined">call</span>電話をかける
-          </a>
-          <a href="${h.navi}" target="_blank" class="flex flex-1 items-center justify-center h-11 px-4 rounded-lg bg-primary/20 dark:bg-primary/30 text-primary font-medium gap-2">
-            <span class="material-symbols-outlined">map</span>地図を見る
-          </a>
-        </div>
-      </div>
+            dateDisplay.textContent = data.date_week;
+            hospitalList.innerHTML = data.hospitals.map(h => `
+            <div class="flex flex-col rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-sm">
+                <h2 class="text-text-primary-light dark:text-text-primary-dark text-lg font-bold"><a href="${h.link}"
+                        target="_blank" class="hover:underline text-primary dark:text-primary">${h.name}</a></h2>
+                <div class="flex flex-col gap-3 pt-4">
+                    <div class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">medical_services</span>
+                        <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">診療: ${h.medical}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">schedule</span>
+                        <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">時間: ${h.time}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span
+                            class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">location_on</span>
+                        <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">住所: ${h.address}</p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-text-secondary-light dark:text-text-secondary-dark">call</span>
+                        <p class="flex-1 text-text-secondary-light dark:text-text-secondary-dark">電話: ${h.daytime}</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 pt-4 mt-2 border-t border-background-light dark:border-background-dark">
+                    <a href="tel:${h.daytime}"
+                        class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-text-on-primary text-base font-medium leading-normal gap-2">
+                        <span class="material-symbols-outlined">call</span>
+                        <span class="truncate">電話をかける</span>
+                    </a>
+                    <a href="${h.navi}" target="_blank"
+                        class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-base font-medium leading-normal gap-2">
+                        <span class="material-symbols-outlined">map</span>
+                        <span class="truncate">地図を見る</span>
+                    </a>
+                </div>
+            </div>
     `).join('');
-  };
+        };
 
-  // === 日付ナビゲーション ===
-  document.getElementById('prevBtn').addEventListener('click', () => {
-    currentDate.setDate(currentDate.getDate() - 1);
-    renderHospitals();
-  });
-  document.getElementById('nextBtn').addEventListener('click', () => {
-    currentDate.setDate(currentDate.getDate() + 1);
-    renderHospitals();
-  });
+        // === 日付ナビゲーション ===
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() - 1);
+            renderHospitals();
+        });
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentDate.setDate(currentDate.getDate() + 1);
+            renderHospitals();
+        });
 
-  // === 初期読み込み ===
-  loadHospitalData();
-  </script>
+        // === 初期読み込み ===
+        loadHospitalData();
+    </script>
 </body>
+
 </html>
