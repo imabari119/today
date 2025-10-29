@@ -25,36 +25,10 @@
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- TailwindCSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="./output.css" rel="stylesheet" />
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />
-
-    <!-- Tailwind 設定 -->
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#D93B3B",
-                        "background-light": "#F8F8F8",
-                        "background-dark": "#1C1C1E",
-                        "card-light": "#FFFFFF",
-                        "card-dark": "#2C2C2E",
-                        "text-primary-light": "#1C1C1E",
-                        "text-primary-dark": "#F2F2F7",
-                        "text-secondary-light": "#6D6D72",
-                        "text-secondary-dark": "#8D8D92",
-                        "text-on-primary": "#FFFFFF",
-                    },
-                    fontFamily: {
-                        display: ["sans-serif"],
-                    },
-                },
-            },
-        };
-    </script>
 
     <style>
         .material-symbols-outlined {
@@ -133,12 +107,12 @@
 
         <!-- プライバシーポリシーリンク -->
         <div class="mt-2">
-            <a href="privacy.html" class="text-primary hover:underline transition-colors duration-200">プライバシーポリシー</a>
+            <a href="./privacy.html" class="text-primary hover:underline transition-colors duration-200">プライバシーポリシー</a>
         </div>
     </footer>
 
     <!-- メインスクリプト -->
-    <script defer src="hospital.js"></script>
+    <script defer src="./hospital.js"></script>
 
 </body>
 
