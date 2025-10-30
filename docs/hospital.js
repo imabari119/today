@@ -133,8 +133,11 @@ document.body.addEventListener("click", (e) => {
 
     const screenWidth = window.innerWidth;
     const clickX = e.clientX;
-    const leftThreshold = screenWidth / 5;
-    const rightThreshold = screenWidth * 4 / 5;
+
+    // スマホ(768px未満)は1/5、タブレット・PCは1/10
+    const ratio = screenWidth < 768 ? 5 : 10;
+    const leftThreshold = screenWidth / ratio;
+    const rightThreshold = screenWidth * (ratio - 1) / ratio;
 
     if (clickX < leftThreshold) {
         // 左1/5をクリック → 前の日
