@@ -60,11 +60,11 @@
     </script>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark font-display">
+<body class="bg-background-light font-display">
     <div class="flex flex-col min-h-screen w-full overflow-x-hidden">
         <!-- ヘッダー -->
-        <header class="flex items-center bg-card-light dark:bg-card-dark p-4 pb-3 sticky top-0 z-10 shadow-sm">
-            <h1 class="text-text-primary-light dark:text-text-primary-dark text-2xl font-bold text-center flex-1">
+        <header class="flex items-center bg-card-light p-4 pb-3 sticky top-0 z-10 shadow-sm">
+            <h1 class="text-text-primary-light text-2xl font-bold text-center flex-1">
                 今治市の救急病院
             </h1>
         </header>
@@ -73,21 +73,21 @@
         <main class="flex-1 px-4 py-4">
             <div class="flex items-center justify-between mb-4">
                 <button id="prevBtn" aria-label="前の日へ"
-                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-text-secondary-light dark:text-text-secondary-dark">
+                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 text-text-secondary-light">
                     <span class="material-symbols-outlined text-3xl">chevron_left</span>
                 </button>
 
                 <p id="dateDisplay" class="text-primary text-xl font-bold"></p>
 
                 <button id="nextBtn" aria-label="次の日へ"
-                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/5 text-text-secondary-light dark:text-text-secondary-dark">
+                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 text-text-secondary-light">
                     <span class="material-symbols-outlined text-3xl">chevron_right</span>
                 </button>
             </div>
 
             <div id="hospitalList" class="flex flex-col gap-4 min-h-[600px]">
                 <div class="loading">
-                    <p class="text-text-secondary-light dark:text-text-secondary-dark">読み込み中...</p>
+                    <p class="text-text-secondary-light">読み込み中...</p>
                 </div>
             </div>
         </main>
@@ -95,7 +95,7 @@
 
     <!-- フッター -->
     <footer
-        class="flex flex-col items-center justify-center gap-2 py-6 mt-6 bg-card-light dark:bg-card-dark text-text-secondary-light dark:text-text-secondary-dark text-sm border-t border-background-light dark:border-background-dark">
+        class="flex flex-col items-center justify-center gap-2 py-6 mt-6 bg-card-light text-text-secondary-light text-sm border-t border-background-light">
 
         <p class="text-center leading-tight">デジタルの力で今治を未来につなげよう</p>
 
