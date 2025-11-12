@@ -20,7 +20,7 @@ jobs:
 
     - name: Download data.json
       run: |
-        curl -sSL "${{ secrets.CSV_URL }}" -o schedule.csv || exit 1
+        curl -sSL "${{ secrets.CSV_URL }}" -o /doc/schedule.csv || exit 1
         curl -sSL "${{ secrets.JSON_URL }}" | jq . > docs/data.json || exit 1
         jq empty docs/data.json || exit 1
 
@@ -35,7 +35,7 @@ jobs:
         if ! git diff --exit-code --quiet
         then
           git add .
-          git commit -m "Update data.json" -a
+          git commit -m "Update data.json schedule.csv" -a
           git push
         fi
 
