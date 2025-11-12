@@ -20,7 +20,7 @@ jobs:
 
     - name: Download data.json
       run: |
-        curl -sSL "${{ secrets.CSV_URL }}" -o doc/schedule.csv || exit 1
+        curl -sSL "${{ secrets.CSV_URL }}" -o docs/schedule.csv || exit 1
         curl -sSL "${{ secrets.JSON_URL }}" | jq . > docs/data.json || exit 1
         jq empty docs/data.json || exit 1
 
