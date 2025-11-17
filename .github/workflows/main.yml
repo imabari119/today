@@ -1,4 +1,4 @@
-name: Download and Commit JSON
+name: Download and Commit CSV
 
 on:
   schedule:
@@ -18,11 +18,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v5
 
-    - name: Download data.json
+    - name: Download schedule.csv
       run: |
         curl -sSL "${{ secrets.CSV_URL }}" -o docs/schedule.csv || exit 1
-        curl -sSL "${{ secrets.JSON_URL }}" | jq . > docs/data.json || exit 1
-        jq empty docs/data.json || exit 1
 
     - name: Commit and push changes
       env:
@@ -35,13 +33,13 @@ jobs:
         if ! git diff --exit-code --quiet
         then
           git add .
-          git commit -m "Update data.json schedule.csv" -a
+          git commit -m "Update schedule.csv" -a
           git push
         fi
 
   deploy-pages:
     name: Deploy GitHub Pages
-    needs: download-json
+    needs: download-csv
     runs-on: ubuntu-latest
     environment:
       name: github-pages
