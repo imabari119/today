@@ -5,46 +5,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>今治市の救急病院｜休日や夜間の当番医がすぐわかる</title>
-
-    <!-- Favicon & Canonical -->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="canonical" href="https://imabari119.github.io/today/" />
-
-    <!-- Meta: 検索最適化 -->
     <meta name="description" content="愛媛県今治市の救急医療情報サイト。地域の救急病院（当番医）をわかりやすく紹介し、休日や夜間の急な病気やケガのときに受診できる医療機関をすぐに確認できます。" />
     <meta name="keywords" content="今治市,救急病院,今日,明日,夜間診療,休日診療,小児科,内科,救急外来" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-
-    <!-- OGP -->
     <meta property="og:title" content="今治市の救急病院｜休日や夜間の当番医がすぐわかる" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://imabari119.github.io/today/" />
     <meta property="og:image" content="https://imabari119.github.io/today/ogp.png" />
-    <meta property="og:site_name" content="今治市の救急病院" />
-    <meta property="og:description" content="愛媛県今治市の救急医療情報サイト。休日や夜間の急な病気やケガのときに受診できる医療機関をすぐに確認できます。" />
     <meta name="twitter:card" content="summary_large_image" />
-
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="今治市の救急病院">
     <link rel="apple-touch-icon" href="./icon.png">
     
-    <!-- TailwindCSS -->
     <link href="./output.css" rel="stylesheet" />
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" rel="stylesheet" />
 
     <style>
         .material-symbols-outlined {
             font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
         }
-
         body {
             min-height: 100vh;
-            font-family: system-ui, sans-serif;
+            font-family: system-ui, -apple-system, sans-serif;
         }
-
         .loading {
             display: flex;
             justify-content: center;
@@ -53,13 +37,10 @@
         }
     </style>
 
-    <!-- Google Tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RMGJ7YEP2B"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+        function gtag() { dataLayer.push(arguments); }
         gtag("js", new Date());
         gtag("config", "G-RMGJ7YEP2B");
     </script>
@@ -67,67 +48,54 @@
 
 <body class="bg-background-light font-display">
     <div class="flex flex-col min-h-screen w-full overflow-x-hidden">
-        <!-- ヘッダー -->
-        <header class="flex items-center bg-card-light p-4 pb-3 sticky top-0 z-10 shadow-sm">
-            <h1 class="text-text-primary-light text-2xl font-bold text-center flex-1">
-                <a href="https://imabari.jpn.org/imabari119/" class="text-black no-underline">今治市の救急病院</a>
-            </h1>
+        <header class="bg-card-light sticky top-0 z-10 shadow-sm border-b border-black/5">
+            <div class="max-w-3xl mx-auto flex items-center p-4 pb-3">
+                <h1 class="text-text-primary-light text-2xl font-bold text-center flex-1">
+                    <a href="https://imabari.jpn.org/imabari119/" class="text-black no-underline">今治市の救急病院</a>
+                </h1>
+            </div>
         </header>
 
-        <!-- メイン -->
-        <main class="flex-1 px-4 py-4">
-            <div class="flex items-center justify-between mb-4">
+        <main class="flex-1 px-4 py-4 max-w-3xl mx-auto w-full">
+            <div class="flex items-center justify-between mb-6">
                 <button id="prevBtn" aria-label="前の日へ"
-                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 text-text-secondary-light">
-                    <span class="material-symbols-outlined text-3xl">chevron_left</span>
+                    class="flex items-center justify-center w-12 h-12 rounded-full hover:bg-black/5 active:bg-black/10 text-text-secondary-light transition-colors">
+                    <span class="material-symbols-outlined text-4xl">chevron_left</span>
                 </button>
 
                 <p id="dateDisplay" class="text-primary text-xl font-bold"></p>
 
                 <button id="nextBtn" aria-label="次の日へ"
-                    class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 text-text-secondary-light">
-                    <span class="material-symbols-outlined text-3xl">chevron_right</span>
+                    class="flex items-center justify-center w-12 h-12 rounded-full hover:bg-black/5 active:bg-black/10 text-text-secondary-light transition-colors">
+                    <span class="material-symbols-outlined text-4xl">chevron_right</span>
                 </button>
             </div>
 
             <div id="hospitalList" class="flex flex-col gap-4 min-h-[600px]">
                 <div class="loading">
-                    <p class="text-text-secondary-light">読み込み中...</p>
+                    <p class="text-text-secondary-light text-lg">読み込み中...</p>
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- フッター -->
-    <footer
-        class="flex flex-col items-center justify-center gap-2 py-6 mt-6 bg-card-light text-text-secondary-light text-sm border-t border-background-light">
-
+    <footer class="flex flex-col items-center justify-center gap-2 py-8 mt-6 bg-card-light text-text-secondary-light text-sm border-t border-background-light">
         <p class="text-center leading-tight">デジタルの力で今治を未来につなげよう</p>
-
-        <a href="https://code4imabari.org/" target="_blank" rel="noopener noreferrer"
-            class="flex flex-col items-center hover:opacity-80 transition">
+        <a href="https://code4imabari.org/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center hover:opacity-80 transition">
             <img src="./logo.webp" alt="Code for Imabari ロゴ" width="200" height="48" loading="lazy" />
             <p class="mt-1">Powered by Code for Imabari</p>
         </a>
-
-        <!-- プライバシーポリシーリンク -->
         <div class="mt-2">
             <a href="./privacy.html" class="text-primary hover:underline transition-colors duration-200">プライバシーポリシー</a>
         </div>
-
-        <p class="text-center leading-tight">
+        <p class="text-center leading-tight mt-2 px-4">
           <small>
-            情報提供:
-            <a href="http://www.imabari-med.jp/" target="_blank" rel="noopener noreferrer">今治市医師会</a>
-            ／
-            <a href="https://www.city.imabari.ehime.jp/shoubou/" target="_blank" rel="noopener noreferrer">今治市消防本部</a>
+            情報提供: <a href="http://www.imabari-med.jp/" target="_blank" rel="noopener noreferrer" class="underline">今治市医師会</a>
+            ／ <a href="https://www.city.imabari.ehime.jp/shoubou/" target="_blank" rel="noopener noreferrer" class="underline">今治市消防本部</a>
           </small>
         </p>
     </footer>
 
-    <!-- メインスクリプト -->
     <script defer src="./hospital.js"></script>
-
 </body>
-
 </html>
