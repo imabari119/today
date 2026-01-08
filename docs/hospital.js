@@ -348,21 +348,6 @@ function initEventListeners() {
     // 日付ナビゲーションボタン
     document.querySelector(SELECTORS.PREV_BTN)?.addEventListener('click', () => changeDate(-1));
     document.querySelector(SELECTORS.NEXT_BTN)?.addEventListener('click', () => changeDate(1));
-    
-    // 画面タップで日付変更
-    document.body.addEventListener('click', (e) => {
-        if (e.target.closest('button, a')) return;
-        
-        const screenWidth = window.innerWidth;
-        const clickX = e.clientX;
-        const ratio = screenWidth < 768 ? 5 : 10;
-        
-        if (clickX < screenWidth / ratio) {
-            changeDate(-1);
-        } else if (clickX > screenWidth * (ratio - 1) / ratio) {
-            changeDate(1);
-        }
-    });
 }
 
 // ===== 初期化 =====
