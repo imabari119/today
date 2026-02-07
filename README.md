@@ -14,8 +14,14 @@
 + 広報いまばりの救急病院の[PDF変換](https://github.com/imabari119/touban)
 + ~~えひめ医療情報ネットからスクレイピング~~
 
-# データ作成方法
+# 更新方法
 
 1. 元データを参照しながらスプレッドシートに手動で転記、目視チェック後CSVを作成
 2. [schedule.csv](https://github.com/imabari119/today/blob/main/docs/schedule.csv)を更新
 3. Github Pageに反映
+
+# 問題
+
+1. データ入力が手動
+2. データ更新も半自動、Github Actionが90日で切れる
+3. 月末に入力しているため途中変更があれば更新が必要
