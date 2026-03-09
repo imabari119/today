@@ -236,7 +236,7 @@ async function loadData() {
         console.error('データ読み込みエラー:', error);
         utils.showError(
             'データの読み込みに失敗しました。',
-            `${error.message}<br>latest.csv と hospital.csv が同じディレクトリにあるか確認してください。`
+            `${error.message}<br>schedule.csv と hospital.csv が同じディレクトリにあるか確認してください。`
         );
     } finally {
         state.isLoading = false;
