@@ -77,12 +77,25 @@
         </header>
 
         <div class="w-full flex justify-center mt-3 px-4">
-            <div class="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded text-center max-w-xl">
+            <div class="bg-red-50 border border-red-300 text-red-700 px-4 py-3 rounded text-center max-w-xl space-y-2">
                 <p class="font-semibold">【重要なお知らせ】</p>
-                <p>本サービスは <strong>2026年3月31日</strong> をもって終了いたします。</p>
+        
+                <!-- 複数行メッセージ対応 -->
+                <div class="text-sm leading-relaxed">
+                    <p>本サービスは <strong>2026年3月31日</strong> をもって終了いたします。</p>
+                    <p>今後の救急病院情報については、以下のいまこそimabariの救急をご利用ください。</p>
+                </div>
+        
+                <!-- リンクボタン -->
+                <a href="https://imakoso-imabari.jp/service/kyukyuubyouin/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center mt-2 px-4 py-2 rounded-md bg-primary text-text-on-primary font-medium hover:opacity-90 transition">
+                    いまこそimabariを見る
+                </a>
             </div>
         </div>
-        
+
         <main class="flex-1 px-4 py-4 max-w-3xl mx-auto w-full">
             <div class="flex items-center justify-center gap-4 mb-4">
                 <button id="prevBtn" aria-label="前の日へ"
