@@ -76,45 +76,44 @@
             </div>
         </header>
 
-        <div class="flex flex-col rounded-xl bg-card-light p-4 shadow-sm mt-4">
-            <h2 class="text-text-primary-light text-xl font-bold">
-                【重要なお知らせ】
-            </h2>
-        
-            <div class="flex flex-col gap-3 pt-4">
-        
-                <!-- メッセージ1 -->
-                <div class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-red-600">warning</span>
-                    <p class="flex-1 text-text-secondary-light">
-                        本サービスは <strong>2026年3月31日</strong> をもって終了いたします。
-                    </p>
-                </div>
-        
-                <!-- メッセージ2（複数行対応） -->
-                <div class="flex items-start gap-3">
-                    <span class="material-symbols-outlined text-red-600">info</span>
-                    <p class="flex-1 text-text-secondary-light">
-                        今後の救急病院情報については、以下の公式サイトをご利用ください。
-                    </p>
-                </div>
-        
-                <!-- ボタン行（hospitalList と同じデザイン） -->
-                <div class="flex items-center gap-3 pt-2 mt-1 border-t border-background-light">
-        
-                    <a href="https://imakoso-imabari.jp/service/kyukyuubyouin/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-text-on-primary text-base font-medium leading-normal gap-2">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        <span class="truncate">公式サイトを見る</span>
-                    </a>
-        
+        <main class="flex-1 px-4 py-4 max-w-3xl mx-auto w-full">
+
+            <div class="flex flex-col rounded-xl bg-card-light p-4 shadow-sm mt-4">
+                <h2 class="text-text-primary-light text-xl font-bold">
+                    【重要なお知らせ】
+                </h2>
+            
+                <div class="flex flex-col gap-3 pt-4">
+            
+                    <!-- メッセージ1 -->
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-red-600">warning</span>
+                        <p class="flex-1 text-text-secondary-light">
+                            本サービスは <strong>2026年3月31日</strong> をもって終了いたします。
+                        </p>
+                    </div>
+            
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-red-600">info</span>
+                        <p class="flex-1 text-text-secondary-light">
+                            今後の救急病院情報については、以下のいまこそimabariの救急ページをご利用ください。
+                        </p>
+                    </div>
+            
+                    <div class="flex items-center gap-3 pt-2 mt-1 border-t border-background-light">
+            
+                        <a href="https://imakoso-imabari.jp/service/kyukyuubyouin/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="flex flex-1 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-4 bg-primary text-text-on-primary text-base font-medium leading-normal gap-2">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                            <span class="truncate">いまこそimabariを見る</span>
+                        </a>
+            
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <main class="flex-1 px-4 py-4 max-w-3xl mx-auto w-full">
+            
             <div class="flex items-center justify-center gap-4 mb-4">
                 <button id="prevBtn" aria-label="前の日へ"
                     class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-black/5 text-text-secondary-light">
